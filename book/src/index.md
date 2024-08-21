@@ -26,7 +26,7 @@ copying, no serialization, no memory allocation, no runtime checks needed.
 
 The FFI signatures are able to use native data structures from whichever side
 they please. In addition, CXX provides builtin bindings for key standard library
-types like strings, vectors, Box, unique\_ptr, etc to expose an idiomatic API on
+types like strings, vectors, Box, unique_ptr, etc to expose an idiomatic API on
 those types to the other language.
 
 ## Example
@@ -61,9 +61,9 @@ Now we simply provide Rust definitions of all the things in the `extern "Rust"`
 block and C++ definitions of all the things in the `extern "C++"` block, and get
 to call back and forth safely.
 
-The [***Tutorial***](tutorial.md) chapter walks through a fleshed out version of
+The [**_Tutorial_**](tutorial.md) chapter walks through a fleshed out version of
 this blobstore example in full detail, including all of the Rust code and all of
-the C++ code. The code is also provided in runnable form in the *demo* directory
+the C++ code. The code is also provided in runnable form in the _demo_ directory
 of <https://github.com/dtolnay/cxx>. To try it out, run `cargo run` from that
 directory.
 
@@ -79,5 +79,5 @@ feels like C++, not like C-style "FFI glue".
 
 <br>
 
-***Chapter outline:** See the hamburger menu in the top left if you are on a
-small screen and it didn't open with a sidebar by default.*
+**\*Chapter outline:** See the hamburger menu in the top left if you are on a
+small screen and it didn't open with a sidebar by default.\*

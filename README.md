@@ -1,5 +1,4 @@
-CXX &mdash; safe FFI between Rust and C++
-=========================================
+# CXX &mdash; safe FFI between Rust and C++
 
 [<img alt="github" src="https://img.shields.io/badge/github-dtolnay/cxx-8da0cb?style=for-the-badge&labelColor=555555&logo=github" height="20">](https://github.com/dtolnay/cxx)
 [<img alt="crates.io" src="https://img.shields.io/crates/v/cxx.svg?style=for-the-badge&color=fc8d62&logo=rust" height="20">](https://crates.io/crates/cxx)
@@ -12,7 +11,7 @@ using bindgen or cbindgen to generate unsafe C-style bindings.
 
 This doesn't change the fact that 100% of C++ code is unsafe. When auditing a
 project, you would be on the hook for auditing all the unsafe Rust code and
-*all* the C++ code. The core safety claim under this new model is that auditing
+_all_ the C++ code. The core safety claim under this new model is that auditing
 just the C++ side would be sufficient to catch all problems, i.e. the Rust side
 can be 100% safe.
 
@@ -24,8 +23,8 @@ cxx = "1.0"
 cxx-build = "1.0"
 ```
 
-*Compiler support: requires rustc 1.48+ and c++11 or newer*<br>
-*[Release notes](https://github.com/dtolnay/cxx/releases)*
+_Compiler support: requires rustc 1.48+ and c++11 or newer_<br>
+_[Release notes](https://github.com/dtolnay/cxx/releases)_
 
 <br>
 
@@ -76,7 +75,7 @@ supports a `put` operation for a discontiguous buffer upload. For example we
 might be uploading snapshots of a circular buffer which would tend to consist of
 2 chunks, or fragments of a file spread across memory for some other reason.
 
-A runnable version of this example is provided under the *demo* directory of
+A runnable version of this example is provided under the _demo_ directory of
 this repo. To try it out, run `cargo run` from that directory.
 
 ```rust
@@ -172,8 +171,8 @@ it's possible that this section could be generated bindgen-style from the
 headers but for now we need the signatures written out; static assertions will
 verify that they are accurate.
 
-Your function implementations themselves, whether in C++ or Rust, *do not* need
-to be defined as `extern "C"` ABI or no\_mangle. CXX will put in the right shims
+Your function implementations themselves, whether in C++ or Rust, _do not_ need
+to be defined as `extern "C"` ABI or no_mangle. CXX will put in the right shims
 where necessary to make it all work.
 
 <br>
@@ -260,7 +259,7 @@ fn main() {
 For use in non-Cargo builds like Bazel or Buck, CXX provides an alternate way of
 invoking the C++ code generator as a standalone command line tool. The tool is
 packaged as the `cxxbridge-cmd` crate on crates.io or can be built from the
-*gen/cmd* directory of this repo.
+_gen/cmd_ directory of this repo.
 
 ```bash
 $ cargo install cxxbridge-cmd
@@ -304,7 +303,7 @@ Some of the considerations that go into ensuring safety are:
   both sides of the boundary rather than just one.
 
 - Template instantiations: for example in order to expose a UniquePtr\<T\> type
-  in Rust backed by a real C++ unique\_ptr, we have a way of using a Rust trait
+  in Rust backed by a real C++ unique_ptr, we have a way of using a Rust trait
   to connect the behavior back to the template instantiations performed by the
   other language.
 
@@ -336,7 +335,7 @@ returns of functions.
 <tr><td>Result&lt;T&gt;</td><td>throw/catch</td><td><sup><i>allowed as return type only</i></sup></td></tr>
 </table>
 
-The C++ API of the `rust` namespace is defined by the *include/cxx.h* file in
+The C++ API of the `rust` namespace is defined by the _include/cxx.h_ file in
 this repo. You will need to include this header in your C++ code when working
 with those types.
 

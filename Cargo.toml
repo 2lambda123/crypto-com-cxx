@@ -1,6 +1,6 @@
 [package]
 name = "cxx"
-version = "1.0.72" # remember to update html_root_url
+version = "1.0.72"                                      # remember to update html_root_url
 authors = ["David Tolnay <dtolnay@gmail.com>"]
 edition = "2018"
 rust-version = "1.48"
@@ -39,7 +39,15 @@ rustversion = "1.0"
 trybuild = { version = "1.0.52", features = ["diff"] }
 
 [workspace]
-members = ["demo", "flags", "gen/build", "gen/cmd", "gen/lib", "macro", "tests/ffi"]
+members = [
+  "demo",
+  "flags",
+  "gen/build",
+  "gen/cmd",
+  "gen/lib",
+  "macro",
+  "tests/ffi",
+]
 
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]
